@@ -1,26 +1,31 @@
-export interface Todo {
-  id: number;
-  text: string;
-  completed: boolean;
-  content?: string;
-}
+// todoActions.ts
 
-const ADD_TODO = "ADD_TODO";
-const TOGGLE_TODO = "TOGGLE_TODO";
-const SET_FILTER = "SET_FILTER";
+export const ADD_TODO = "ADD_TODO";
+export const TOGGLE_TODO = "TOGGLE_TODO";
+export const SET_FILTER = "SET_FILTER";
 
+// Действие для добавления задачи
 export const addTodo = (content: string) => ({
   type: ADD_TODO,
   payload: content,
 });
-export const toggleTodo = (id: number) => ({ type: TOGGLE_TODO, payload: id });
-export const setFilter = (filter: string) => ({
+
+// Действие для переключения состояния задачи
+export const toggleTodo = (id: number) => ({
+  type: TOGGLE_TODO,
+  payload: id,
+});
+
+// Действие для установки фильтра
+export const setFilter = (filter: Filters) => ({
   type: SET_FILTER,
   payload: filter,
 });
 
-export const Filters = {
-  ALL: "ALL",
-  COMPLETED: "COMPLETED",
-  CURRENT: "CURRENT",
-};
+// Определения фильтров...
+export enum Filters {
+  ALL = "ALL",
+  COMPLETED = "COMPLETED",
+  INCOMPLETE = "INCOMPLETE",
+  CURRENT = "CURRENT",
+}

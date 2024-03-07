@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { Todo } from "../store/todoActions";
+import { Todo } from "../store/types";
 
 const TodoCounter = () => {
   const todos = useSelector((state: any) => state.todos);

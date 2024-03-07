@@ -1,4 +1,6 @@
-import { addTodo, toggleTodo, setFilter, Filters } from "./todoActions";
+// todoReducer.ts
+
+import { ADD_TODO, TOGGLE_TODO, SET_FILTER, Filters } from "./todoActions";
 
 export interface Todo {
   id: number;
@@ -8,7 +10,7 @@ export interface Todo {
 
 interface TodoState {
   todos: Todo[];
-  filter: string;
+  filter: Filters;
 }
 
 const initialState: TodoState = {
@@ -18,22 +20,22 @@ const initialState: TodoState = {
 
 const todoReducer = (state = initialState, action: any) => {
   switch (action.type) {
-    case addTodo:
+    case ADD_TODO: // Используйте тип действия, а не само действие
       const nextId =
-        state.todos.length > 0 ? state.todos[state.todos.length - 1].id + 1 : 1;
-      if (action.payload.length <= 10) {
-        // Replace 10 with your N
-        return {
-          ...state,
-          todos: [
-            ...state.todos,
-            { id: nextId, content: action.payload, completed: false },
-          ],
-        };
-      }
-      return state;
+        state.todos.length > 0 ? state.todos[state.todos.length - 1].id + 1 : 0;
+      return {
+        ...state,
+        todos: [
+          ...state.todos,
+          {
+            id: nextId,
+            content: action.payload,
+            completed: false,
+          },
+        ],
+      };
 
-    case toggleTodo:
+    case TOGGLE_TODO: // Используйте тип действия, а не само действие
       return {
         ...state,
         todos: state.todos.map((todo) =>
@@ -43,7 +45,7 @@ const todoReducer = (state = initialState, action: any) => {
         ),
       };
 
-    case setFilter:
+    case SET_FILTER: // Используйте тип действия, а не само действие
       return {
         ...state,
         filter: action.payload,

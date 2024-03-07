@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { toggleTodo, Todo, Filters } from "../store/todoActions";
+import { toggleTodo, Filters } from "../store/todoActions";
+import { Todo } from "../store/types"; // Импорт типа Todo из файла types.ts
 
 const TodoList = () => {
   const dispatch = useDispatch();
