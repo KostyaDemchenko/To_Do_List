@@ -1,17 +1,18 @@
+// import components
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { toggleTodo } from "../../store/todoActions";
 import { Todo } from "../../store/types";
-import { Filters } from "../../store/todoActions"; // Импортируем типы фильтров
+import { Filters } from "../../store/todoActions";
 
+// import css
 import "./style.css";
 
 const TodoCounter = () => {
   const dispatch = useDispatch();
   const todos = useSelector((state: any) => state.todos);
-  const filter = useSelector((state: any) => state.filter); // Получаем текущий выбранный фильтр
+  const filter = useSelector((state: any) => state.filter);
 
-  // Фильтруем задачи в соответствии с выбранным фильтром
   const filteredTodos = todos.filter((todo: Todo) => {
     if (filter === Filters.ALL) {
       return true;
@@ -37,7 +38,7 @@ const TodoCounter = () => {
           <div
             className='un-completed-element'
             onClick={() => dispatch(toggleTodo(todo.id))}
-            key={todo.id} // Переместил key внутрь div
+            key={todo.id}
           >
             <p>{todo.content}</p>
           </div>
@@ -51,7 +52,7 @@ const TodoCounter = () => {
           <div
             className='completed-element'
             onClick={() => dispatch(toggleTodo(todo.id))}
-            key={todo.id} // Переместил key внутрь div
+            key={todo.id}
           >
             <p>{todo.content}</p>
           </div>
