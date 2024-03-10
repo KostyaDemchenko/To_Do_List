@@ -7,8 +7,8 @@
   gap: 30px;
 }
 
-.un-complited-container,
-.complited-container {
+.un-completed-container,
+.completed-container {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -21,8 +21,8 @@
   font-weight: 300;
 }
 
-.todo-counter .un-complited-element,
-.todo-counter .complited-element {
+.todo-counter .un-completed-element,
+.todo-counter .completed-element {
   padding: 0.5rem 0.7rem;
   background: var(--background);
   border: var(--button-border);
@@ -33,25 +33,25 @@
   align-items: center;
 }
 
-.todo-counter .un-complited-element p,
-.todo-counter .complited-element p {
+.todo-counter .un-completed-element p,
+.todo-counter .completed-element p {
   margin-left: 30px;
   position: relative;
   max-width: 350px;
   hyphens: auto;
 }
 
-.todo-counter .un-complited-element p {
+.todo-counter .un-completed-element p {
   text-decoration: none;
 }
 
-.todo-counter .complited-element p {
+.todo-counter .completed-element p {
   text-decoration: line-through;
   opacity: 0.5;
 }
 
-.todo-counter .un-complited-element p::before,
-.todo-counter .complited-element p::before {
+.todo-counter .un-completed-element p::before,
+.todo-counter .completed-element p::before {
   position: absolute;
   content: "";
   width: 24px;
@@ -63,7 +63,7 @@
   transform: translateY(-50%);
 }
 
-.todo-counter .complited-element p::before {
+.todo-counter .completed-element p::before {
   background-image: url(./StateImg/check_box.svg);
 }
 
