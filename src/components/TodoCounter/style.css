@@ -23,14 +23,40 @@
 .todo-counter .un-complited-element,
 .todo-counter .complited-element {
   cursor: pointer;
-  margin-left: 10px;
+  margin-left: 30px;
+  position: relative;
 }
 
 .todo-counter .un-complited-element {
   text-decoration: none;
 }
 
+.todo-counter .un-complited-element::before,
+.todo-counter .complited-element::before {
+  position: absolute;
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-image: url(./StateImg/check_box_outline_blank.svg);
+  background-repeat: no-repeat;
+  left: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.todo-counter .complited-element::before {
+  background-image: url(./StateImg/check_box.svg);
+}
+
 .todo-counter .complited-element {
   text-decoration: line-through;
   opacity: 0.5;
+}
+
+@media screen and (max-width: 550px) {
+  .un-complited-container,
+  .complited-container {
+    gap: 15px;
+    min-height: 150px;
+  }
 }

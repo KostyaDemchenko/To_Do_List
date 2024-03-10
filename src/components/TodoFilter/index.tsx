@@ -10,11 +10,22 @@ const TodoFilter = () => {
 
   return (
     <div className='todo-filter'>
-      <button onClick={() => dispatch(setFilter(Filters.ALL))}>All</button>
-      <button onClick={() => dispatch(setFilter(Filters.COMPLETED))}>
+      <button
+        className='btn-sub-primary'
+        onClick={() => dispatch(setFilter(Filters.ALL))}
+      >
+        All
+      </button>
+      <button
+        className='btn-sub-primary'
+        onClick={() => dispatch(setFilter(Filters.COMPLETED))}
+      >
         Completed
       </button>
-      <button onClick={() => dispatch(setFilter(Filters.CURRENT))}>
+      <button
+        className='btn-sub-primary'
+        onClick={() => dispatch(setFilter(Filters.CURRENT))}
+      >
         Current
       </button>
     </div>

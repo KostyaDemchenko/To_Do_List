@@ -7,6 +7,7 @@ import TodoCounter from "./components/TodoCounter";
 
 // import css
 import "./global.css";
+import "./media.css";
 
 function App() {
   return (

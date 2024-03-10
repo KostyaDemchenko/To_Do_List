@@ -9,3 +9,9 @@
 .todo-form button {
   width: 160px;
 }
+
+@media screen and (max-width: 550px) {
+  .todo-form {
+    gap: 10px;
+  }
+}

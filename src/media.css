@@ -1,0 +1,43 @@
+@media screen and (max-width: 550px) {
+  .app-wrapper {
+    gap: 20px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px 15px;
+  }
+
+  button {
+    background: var(--button-background);
+    border: var(--button-border);
+    border-radius: var(--border-radius);
+    color: var(--button-color);
+    font-weight: var(--button-font-weight);
+    padding: var(--button-padding);
+    text-transform: var(--button-text-transform);
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    line-height: 1rem;
+    cursor: pointer;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="password"],
+  input[type="url"],
+  input[type="date"],
+  input[type="file"],
+  select,
+  textarea {
+    background: var(--grayscale-1);
+    border: 1px solid var(--grayscale-3);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    color: var(--text);
+    padding: 0.7rem 0.7rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    display: block;
+    width: 100%;
+  }
+}

@@ -4,3 +4,9 @@
   justify-content: flex-start;
   gap: 30px;
 }
+
+@media screen and (max-width: 550px) {
+  .todo-filter {
+    gap: 10px;
+  }
+}

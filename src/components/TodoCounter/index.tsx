@@ -17,7 +17,9 @@ const TodoCounter = () => {
   return (
     <div className='todo-counter'>
       <div className='un-complited-container'>
-        <h4>Uncompleted: {uncompletedTodos.length}</h4>
+        <hgroup>
+          <h3>Uncompleted: {uncompletedTodos.length}</h3>
+        </hgroup>
         {uncompletedTodos.map((todo: Todo) => (
           <p
             className='un-complited-element'
@@ -29,7 +31,9 @@ const TodoCounter = () => {
         ))}
       </div>
       <div className='complited-container'>
-        <h4>Completed: {completedTodos.length}</h4>
+        <hgroup>
+          <h3>Completed: {completedTodos.length}</h3>
+        </hgroup>
         {completedTodos.map((todo: Todo) => (
           <p
             className='complited-element'
