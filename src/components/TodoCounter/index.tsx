@@ -21,13 +21,12 @@ const TodoCounter = () => {
           <h3>Uncompleted: {uncompletedTodos.length}</h3>
         </hgroup>
         {uncompletedTodos.map((todo: Todo) => (
-          <p
+          <div
             className='un-complited-element'
-            key={todo.id}
             onClick={() => dispatch(toggleTodo(todo.id))}
           >
-            {todo.content}
-          </p>
+            <p key={todo.id}>{todo.content}</p>
+          </div>
         ))}
       </div>
       <div className='complited-container'>
@@ -35,13 +34,12 @@ const TodoCounter = () => {
           <h3>Completed: {completedTodos.length}</h3>
         </hgroup>
         {completedTodos.map((todo: Todo) => (
-          <p
+          <div
             className='complited-element'
-            key={todo.id}
             onClick={() => dispatch(toggleTodo(todo.id))}
           >
-            {todo.content}
-          </p>
+            <p key={todo.id}>{todo.content}</p>
+          </div>
         ))}
       </div>
     </div>
