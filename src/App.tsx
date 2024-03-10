@@ -1,17 +1,19 @@
 import React from "react";
-import "./App.css";
+
+// import components
 import TodoForm from "./components/TodoForm";
-import TodoList from "./components/TodoList";
 import TodoFilter from "./components/TodoFilter";
 import TodoCounter from "./components/TodoCounter";
 
+// import css
+import "./global.css";
+
 function App() {
   return (
-    <div className='App'>
+    <div className='app-wrapper'>
       <h1>ToDo App</h1>
       <TodoForm />
       <TodoFilter />
-      <TodoList />
       <TodoCounter />
     </div>
   );

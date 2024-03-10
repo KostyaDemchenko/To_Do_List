@@ -1,0 +1,6 @@
+.todo-filter {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 30px;
+}

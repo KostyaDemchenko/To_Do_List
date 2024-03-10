@@ -2,9 +2,12 @@
 
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addTodo } from "../store/todoActions"; // Импортируйте действие addTodo
+import { addTodo } from "../../store/todoActions";
 
-const TodoForm = () => {
+// import css
+import "./style.css";
+
+function TodoForm() {
   const [input, setInput] = useState("");
   const dispatch = useDispatch();
 
@@ -17,7 +20,7 @@ const TodoForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className='todo-form'>
       <input
         type='text'
         value={input}
@@ -27,6 +30,6 @@ const TodoForm = () => {
       <button type='submit'>Add Todo</button>
     </form>
   );
-};
+}
 
 export default TodoForm;

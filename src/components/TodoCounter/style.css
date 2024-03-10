@@ -1,0 +1,36 @@
+.todo-counter {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.un-complited-container,
+.complited-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 300px;
+}
+
+.todo-counter p {
+  margin: 0;
+  font-size: 24px;
+}
+
+.todo-counter .un-complited-element,
+.todo-counter .complited-element {
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.todo-counter .un-complited-element {
+  text-decoration: none;
+}
+
+.todo-counter .complited-element {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
