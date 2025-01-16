@@ -1,5 +1,5 @@
 {
-  "homepage": "https://kostyademchenko.github.io/my-todo-app/",
+  "homepage": "/",
   "name": "my-todo-app",
   "version": "0.1.0",
   "private": true,
@@ -49,6 +49,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@wemake-services/eslint-config-typescript": "^3.1.1",
     "@wemake-services/stylelint-config-scss": "^4.0.1"
   }
